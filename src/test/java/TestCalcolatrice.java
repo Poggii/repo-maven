@@ -1,13 +1,11 @@
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import junit.framework.Assert;
-
-class TestCalcolatrice {
+public class TestCalcolatrice {
 
 	@Test
-	void testSomma() 
+	public void testSomma() 
 	{
 		Calcolatrice c = new Calcolatrice();
 		
@@ -17,7 +15,7 @@ class TestCalcolatrice {
 	}
 
 	@Test
-	void testSomma2() 
+	public void testSomma2() 
 	{
 		Calcolatrice c = new Calcolatrice();
 		
