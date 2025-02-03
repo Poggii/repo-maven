@@ -1,8 +1,6 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+
 
 import org.junit.Assert;
-
 import org.junit.Test;
 
 public class TestCalcolatrice {
@@ -14,7 +12,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.somma(5,6);
 		
-		assertEquals(11, res);
+		Assert.assertEquals(11, res, 0);
 	}
 	@Test
 	public void testSomma2() 
@@ -23,7 +21,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.somma(6,6);
 		
-		assertEquals(12, res);
+		Assert.assertEquals(12, res, 0);
 	}
 	@Test
 	public void testSommaNegativo() 
@@ -32,7 +30,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.somma(10,-5);
 		
-		assertEquals(5, res);
+		Assert.assertEquals(5, res, 0);
 	}
 	@Test
 	public void testSott() 
@@ -41,7 +39,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.differenza(5,6);
 		
-		assertEquals(-1, res);
+		Assert.assertEquals(-1, res, 0);
 	}
 	@Test
 	public void testSott2() 
@@ -50,7 +48,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.differenza(6,6);
 		
-		assertEquals(0, res);
+		Assert.assertEquals(0, res, 0);
 	}
 	@Test
 	public void testSottNeg() 
@@ -59,7 +57,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.differenza(-5,-3);
 		
-		assertEquals(-2, res);
+		Assert.assertEquals(-2, res, 0);
 	}
 	@Test
 	public void testMolt() 
@@ -68,7 +66,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.moltiplicazione(5,6);
 		
-		assertEquals(30, res);
+		Assert.assertEquals(30, res, 0);
 	}
 	@Test
 	public void testMolt2() 
@@ -77,7 +75,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.moltiplicazione(6,6);
 		
-		assertEquals(36, res);
+		Assert.assertEquals(36, res, 0);
 	}
 	@Test
 	public void testMoltNeg() 
@@ -86,7 +84,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.moltiplicazione(-5,6);
 		
-		assertEquals(-30, res);
+		Assert.assertEquals(-30, res, 0);
 	}
 	@Test
 	public void testDiv()  throws Exception 
@@ -95,7 +93,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.divisione(8,8);
 		
-		assertEquals(1, res);
+		Assert.assertEquals(1, res, 0);
 	}
 	@Test
 	public void testDiv2()  throws Exception 
@@ -104,7 +102,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.divisione(20,4);
 		
-		assertEquals(5, res);
+		Assert.assertEquals(5, res, 0);
 	}
 	@Test
 	public void testDivNeg()  throws Exception 
@@ -113,7 +111,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.divisione(-5,10);
 		
-		assertEquals(-0.5, res);
+		Assert.assertEquals(-0.5, res, 0);
 	}
 	
 	@Test
@@ -123,7 +121,7 @@ public class TestCalcolatrice {
 		
 		double res =  c.divisione(-5,10);
 		
-		assertNotEquals(82, res);
+		Assert.assertNotEquals(82, res);
 	}
 	@Test
 	public void testDiv0() throws Exception 
@@ -133,7 +131,7 @@ public class TestCalcolatrice {
 		try
 		{
 			double res =  c.divisione(5,0);
-			assertEquals(null, res);
+			Assert.assertEquals(null, res);
 		}
 		catch(Exception e)
 		{
